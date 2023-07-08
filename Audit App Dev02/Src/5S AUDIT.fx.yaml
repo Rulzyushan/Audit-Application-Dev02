@@ -1,0 +1,198 @@
+"'5S AUDIT' As screen":
+    BackgroundImage: =
+
+    Label1_13 As label:
+        Align: =Align.Right
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(141, 198, 63, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =67
+        Size: =20
+        Text: =""
+        Width: =640
+        Y: =1069
+        ZIndex: =1
+
+    Label1_8 As label:
+        Align: =Align.Right
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(141, 198, 63, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =67
+        Size: =20
+        Text: ="5S Audit  "
+        Width: =640
+        Y: =16
+        ZIndex: =2
+
+    Image1 As image:
+        Height: =39
+        Image: ='mas-holdings-logo-2ACA338CD6-seeklogo.com'
+        Width: =184
+        X: =13
+        Y: =30
+        ZIndex: =3
+
+    Label2_11 As label:
+        Align: =Align.Right
+        Color: =RGBA(179, 179, 179, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Size: =18
+        Text: ="ACTIVE LINEA INTIMO - IE"
+        Width: =316
+        X: =182
+        Y: =38
+        ZIndex: =4
+
+    Label2_16 As label:
+        Align: =Align.Right
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =37
+        Text: ="IE DIGITALIZATION"
+        Width: =180
+        X: =436
+        Y: =1099
+        ZIndex: =10
+
+    Label2_5 As label:
+        Align: =Align.Right
+        FontWeight: =FontWeight.Semibold
+        Height: =37
+        Size: =12
+        Text: ="Designed by "
+        X: =466
+        Y: =1076
+        ZIndex: =11
+
+    Icon5 As icon.Lock:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =50
+        Icon: =Icon.Lock
+        Visible: |-
+            =If(
+                LookUp('IE Department Name list',User().Email='Email IE','Responsible For 5S'.Value)= "5S",
+                false,true
+            )
+        Width: =50
+        X: =540
+        Y: =134
+        ZIndex: =12
+
+    Group1 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =12
+
+        Button2_31 As button:
+            Fill: =RGBA(0, 134, 208, 1)
+            Height: =82
+            OnSelect: |-
+                =
+                If(
+                    LookUp('IE Department Name list',User().Email='Email IE','Responsible For 5S'.Value)= "5S",
+                    Navigate(ADMIN) && NewForm(FormAdmin)
+                )
+                
+                //Navigate(ADMIN) && NewForm(FormAdmin)
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Size: =21
+            Text: ="Admin"
+            Width: =592
+            X: =24
+            Y: =118
+            ZIndex: =5
+
+        Button2_32 As button:
+            Fill: =RGBA(0, 134, 208, 1)
+            Height: =82
+            OnSelect: =Navigate('5S AUDIT SHEET') && Set(varTabSelected,1) && NewForm(FormAuditSheet) && Refresh('Audit App 5S Updated')
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Size: =21
+            Text: ="5S Audit Sheet"
+            Width: =592
+            X: =24
+            Y: =213
+            ZIndex: =6
+
+        Button2_33 As button:
+            Fill: =RGBA(0, 134, 208, 1)
+            Height: =82
+            OnSelect: |
+                =Set(varURL, "https://massl.sharepoint.com/:x:/r/sites/LineaIntimo/IEDigitalization/_layouts/15/Doc.aspx?sourcedoc=%7Bcd137b36-e39d-4b04-8e96-004f874497e1%7D&action=editnew&cid=37ea965d-84c5-422e-be88-5c8c3e75e101");
+                Launch(varURL);
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Size: =21
+            Text: ="Audit Report"
+            Width: =592
+            X: =24
+            Y: =309
+            ZIndex: =7
+
+        Button2_34 As button:
+            Fill: =RGBA(0, 134, 208, 1)
+            Height: =82
+            OnSelect: =Navigate('5S CAPTURED VIOLATION')
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Size: =21
+            Text: ="Captured Violation"
+            Width: =592
+            X: =24
+            Y: =406
+            ZIndex: =8
+
+        Button2_35 As button:
+            Fill: =RGBA(0, 134, 208, 1)
+            Height: =82
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Size: =21
+            Text: =""
+            Width: =592
+            X: =24
+            Y: =503
+            ZIndex: =9
+
+    Icon6 As icon.Unlock:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =50
+        Icon: =Icon.Unlock
+        Visible: |-
+            =If(
+                LookUp('IE Department Name list',User().Email='Email IE','Responsible For 5S'.Value)= "5S",
+                true,false
+            )
+        Width: =50
+        X: =540
+        Y: =134
+        ZIndex: =13
+
+    Icon1_6 As icon.BackArrow:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.Home
+        OnSelect: =Navigate('AUDIT APPLICATION')
+        Width: =40
+        X: =26
+        Y: =1085
+        ZIndex: =14
+

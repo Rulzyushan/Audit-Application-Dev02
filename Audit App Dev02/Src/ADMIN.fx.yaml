@@ -1,0 +1,450 @@
+ADMIN As screen:
+
+    Label1_12 As label:
+        Align: =Align.Right
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(141, 198, 63, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =67
+        Size: =20
+        Text: =""
+        Width: =640
+        Y: =1069
+        ZIndex: =1
+
+    GalleryAdmin As gallery.galleryVertical:
+        BorderThickness: =1
+        DelayItemLoading: =true
+        Fill: =RGBA(237, 237, 237, 1)
+        Height: =207
+        Items: =Sort('Audit App 5S Updated',Modified,SortOrder.Descending)
+        Layout: =Layout.Vertical
+        LoadingSpinner: =LoadingSpinner.Data
+        OnSelect: =ResetForm(FormAdmin);EditForm(FormAdmin)
+        TemplateFill: =If(ThisItem.IsSelected,ColorFade(RGBA(98, 100, 167, 1),-2%),RGBA(0, 0, 0, 0))
+        TemplateSize: =77
+        Y: =849
+        ZIndex: =2
+
+        Label1 As label:
+            Height: =53
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.ID
+            Width: =60
+            X: =16
+            Y: =12
+            ZIndex: =1
+
+        Label1_1 As label:
+            Height: =53
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'First Auditor'.Value
+            Width: =166
+            X: =76
+            Y: =12
+            ZIndex: =2
+
+        Label1_2 As label:
+            Height: =53
+            OnSelect: =Select(Parent)
+            Size: =21
+            Text: =ThisItem.'Second Auditor'.Value
+            Width: =166
+            X: =253
+            Y: =12
+            ZIndex: =3
+
+        Icon3 As icon.Trash:
+            Color: =RGBA(0, 0, 0, 1)
+            Height: =40
+            Icon: =Icon.Trash
+            OnSelect: |-
+                =Remove('Audit App 5S Updated',ThisItem);
+                NewForm(FormAdmin)
+            Width: =40
+            X: =560
+            Y: =15
+            ZIndex: =4
+
+    Label1_9 As label:
+        Align: =Align.Right
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(141, 198, 63, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =67
+        Size: =20
+        Text: ="Admin  "
+        Width: =640
+        Y: =16
+        ZIndex: =3
+
+    Image1_1 As image:
+        Height: =39
+        Image: ='mas-holdings-logo-2ACA338CD6-seeklogo.com'
+        Width: =184
+        X: =13
+        Y: =34
+        ZIndex: =4
+
+    Label2_12 As label:
+        Align: =Align.Right
+        Color: =RGBA(179, 179, 179, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Size: =18
+        Text: ="ACTIVE LINEA INTIMO - IE"
+        Width: =316
+        X: =182
+        Y: =38
+        ZIndex: =5
+
+    Label2_17 As label:
+        Align: =Align.Right
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =37
+        Text: ="IE DIGITALIZATION"
+        Width: =180
+        X: =436
+        Y: =1099
+        ZIndex: =6
+
+    Label2_6 As label:
+        Align: =Align.Right
+        FontWeight: =FontWeight.Semibold
+        Height: =37
+        Size: =12
+        Text: ="Designed by "
+        X: =466
+        Y: =1076
+        ZIndex: =7
+
+    FormAdmin As form:
+        BorderThickness: =1
+        DataSource: ='Audit App 5S Updated'
+        Fill: =RGBA(241, 244, 249, 1)
+        Height: =715
+        Item: =GalleryAdmin.Selected
+        OnFailure: =Notify("Audit sheet creation not successful",NotificationType.Error)
+        OnSuccess: |-
+            =Notify("You Have Succussfully created new Audit sheet",NotificationType.Success);
+            Office365Outlook.SendEmailV2(
+                FirstAuditorMail.Text,
+                "Notification about 5S Audit", // Subject
+                "Please be prepare for next 5S Audit and done before"
+                 &Date(Year(Today()),Month(Today()),Day(Today())+7)  // Body
+            );
+            Office365Outlook.SendEmailV2(
+                SecondAuditorMail.Text,
+                "Notification about 5S Audit", // Subject
+                "Please be prepare for next 5S Audit and done before"
+                 &Date(Year(Today()),Month(Today()),Day(Today())+7)  // Body
+            );
+        Width: =640
+        Y: =120
+        ZIndex: =8
+
+        "'First Auditor_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="First_x0020_Auditor"
+            Default: =ThisItem.'First Auditor'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App 5S Updated'],DataSourceInfo.DisplayName,"First_x0020_Auditor")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValue2.Selected
+            Width: =639
+            X: =0
+            Y: =0
+            ZIndex: =12
+
+            DataCardKey2 As label:
+                Fill: =RGBA(219, 219, 219, 1)
+                Height: =68
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue2 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =1
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@'Audit App 5S Updated'].'First Auditor')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Audit App 5S Updated'.'First Auditor',DataCardValue2.SearchText)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey2.Y + DataCardKey2.Height + 5
+                ZIndex: =2
+
+            ErrorMessage2 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue2.Y + DataCardValue2.Height
+                ZIndex: =3
+
+        "'Second Auditor_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Second_x0020_Auditor"
+            Default: =ThisItem.'Second Auditor'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App 5S Updated'],DataSourceInfo.DisplayName,"Second_x0020_Auditor")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValue3.Selected
+            Width: =639
+            X: =0
+            Y: =1
+            ZIndex: =12
+
+            DataCardKey3 As label:
+                Fill: =RGBA(219, 219, 219, 1)
+                Height: =68
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue3 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =1
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@'Audit App 5S Updated'].'Second Auditor')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Audit App 5S Updated'.'Second Auditor',DataCardValue3.SearchText)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey3.Y + DataCardKey3.Height + 5
+                ZIndex: =2
+
+            ErrorMessage3 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue3.Y + DataCardValue3.Height
+                ZIndex: =3
+
+        "'Audit Start Date_DataCard1' As typedDataCard.dateEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Audit_x0020_Start_x0020_Date"
+            Default: =ThisItem.'Audit Start Date'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App 5S Updated'],DataSourceInfo.DisplayName,"Audit_x0020_Start_x0020_Date")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValue4.SelectedDate
+            Width: =639
+            X: =0
+            Y: =2
+            ZIndex: =12
+
+            DataCardKey4 As label:
+                Fill: =RGBA(219, 219, 219, 1)
+                Height: =68
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue4 As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =1
+                DefaultDate: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                Height: =70
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                Size: =24
+                StartYear: =1899
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey4.Y + DataCardKey4.Height + 5
+                ZIndex: =2
+
+            ErrorMessage4 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue4.Y + DataCardValue4.Height
+                ZIndex: =3
+
+        "'Audit End Date_DataCard1' As typedDataCard.dateEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Audit_x0020_End_x0020_Date"
+            Default: =ThisItem.'Audit End Date'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App 5S Updated'],DataSourceInfo.DisplayName,"Audit_x0020_End_x0020_Date")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValue5.SelectedDate
+            Width: =639
+            X: =0
+            Y: =3
+            ZIndex: =12
+
+            DataCardKey5 As label:
+                Fill: =RGBA(219, 219, 219, 1)
+                Height: =68
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue5 As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =1
+                DefaultDate: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                Height: =70
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                Size: =24
+                StartYear: =1899
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey5.Y + DataCardKey5.Height + 5
+                ZIndex: =2
+
+            ErrorMessage5 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue5.Y + DataCardValue5.Height
+                ZIndex: =3
+
+    Button2_37 As button:
+        Fill: =RGBA(153, 160, 196, 1)
+        OnSelect: |
+            =SubmitForm(FormAdmin);Refresh('Audit App 5S Updated')
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =18
+        Text: ="Submit"
+        Width: =120
+        X: =496
+        Y: =780
+        ZIndex: =9
+
+    Button2_38 As button:
+        Fill: =RGBA(153, 160, 196, 1)
+        OnSelect: |
+            =NewForm(FormAdmin)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =18
+        Text: ="Add"
+        Width: =120
+        X: =346
+        Y: =780
+        ZIndex: =10
+
+    Icon1_3 As icon.BackArrow:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.Home
+        OnSelect: =Navigate('5S AUDIT')
+        Width: =40
+        X: =26
+        Y: =1085
+        ZIndex: =11
+
+    FirstAuditorMail As text:
+        BorderThickness: =0
+        Default: =LookUp('IE Department Name list','Email Address'=DataCardValue2.Selected.Value,'Email IE')
+        Visible: =false
+        Width: =200
+        X: =26
+        Y: =780
+        ZIndex: =12
+
+    SecondAuditorMail As text:
+        BorderThickness: =0
+        Default: =LookUp('IE Department Name list','Email Address'=DataCardValue3.Selected.Value,'Email IE')
+        Visible: =false
+        Width: =200
+        X: =39
+        Y: =780
+        ZIndex: =13
+

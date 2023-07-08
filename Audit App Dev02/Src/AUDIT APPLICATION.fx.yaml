@@ -1,0 +1,202 @@
+"'AUDIT APPLICATION' As screen":
+    BackgroundImage: =
+
+    Label1_17 As label:
+        Align: =Align.Right
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(141, 198, 63, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =67
+        Size: =20
+        Text: =""
+        Width: =640
+        Y: =1069
+        ZIndex: =2
+
+    Label1_16 As label:
+        Align: =Align.Right
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(141, 198, 63, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =67
+        Size: =20
+        Text: ="IE Audit  "
+        Width: =640
+        Y: =16
+        ZIndex: =3
+
+    Image1_4 As image:
+        Height: =39
+        Image: ='mas-holdings-logo-2ACA338CD6-seeklogo.com'
+        Width: =184
+        X: =13
+        Y: =30
+        ZIndex: =4
+
+    Label2_15 As label:
+        Align: =Align.Right
+        Color: =RGBA(179, 179, 179, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Size: =18
+        Text: ="ACTIVE LINEA INTIMO - IE"
+        Width: =316
+        X: =182
+        Y: =38
+        ZIndex: =5
+
+    Label2_20 As label:
+        Align: =Align.Right
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =37
+        Text: ="IE DIGITALIZATION"
+        Width: =180
+        X: =436
+        Y: =1099
+        ZIndex: =6
+
+    Label2_9 As label:
+        Align: =Align.Right
+        FontWeight: =FontWeight.Semibold
+        Height: =37
+        Size: =12
+        Text: ="Designed by "
+        X: =466
+        Y: =1076
+        ZIndex: =7
+
+    Image6 As image:
+        Height: =416
+        Image: ='Logo_of_MAS_Holdings (1)'
+        Width: =554
+        X: =44
+        Y: =83
+        ZIndex: =15
+
+    Icon1_9 As icon.BackArrow:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.CancelBadge
+        OnSelect: =Exit()
+        Width: =40
+        X: =26
+        Y: =1085
+        ZIndex: =16
+
+    Group2 As group:
+        Height: =5
+        Width: =5
+        X: =40
+        Y: =40
+        ZIndex: =16
+
+        Button2_49 As button:
+            BorderColor: =RGBA(0, 121, 187, 1)
+            BorderThickness: =3
+            Fill: =RGBA(102, 182, 227, 1)
+            Height: =144
+            OnSelect: |
+                =ResetForm(FormSTW_Audit_updated) And NewForm(FormSTW_Audit_updated);
+                Refresh('Audit App STW Update');
+                Navigate('STW AUDIT SHEET_1') And Set(varTabSelectedSTW,2);
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Size: =18
+            Text: ="STW"
+            Width: =258
+            X: =44
+            Y: =890
+            ZIndex: =8
+
+        Button2_51 As button:
+            BorderColor: =RGBA(151, 0, 0, 1)
+            BorderThickness: =3
+            Fill: =RGBA(203, 102, 102, 1)
+            Height: =144
+            OnSelect: |-
+                =Navigate('AUDIT VE') And NewForm(UnitFlowAuditForm);
+                Refresh('Audit App VE unit of flow Audit') And Refresh('Audit App VE unit of flow section and module')
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Size: =18
+            Text: ="VE"
+            Width: =258
+            X: =44
+            Y: =535
+            ZIndex: =10
+
+        Button2_52 As button:
+            BorderColor: =RGBA(0, 16, 96, 1)
+            BorderThickness: =3
+            Fill: =RGBA(102, 113, 166, 1)
+            Height: =144
+            OnSelect: =Navigate('5S AUDIT') && Refresh('Audit App 5S Updated')
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Size: =18
+            Text: ="5S"
+            Width: =258
+            X: =340
+            Y: =890
+            ZIndex: =11
+
+        Button2_53 As button:
+            BorderColor: =RGBA(77, 77, 77, 1)
+            BorderThickness: =3
+            Fill: =RGBA(149, 149, 149, 1)
+            Height: =144
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Size: =18
+            Text: ="COSTING"
+            Width: =258
+            X: =340
+            Y: =711
+            ZIndex: =12
+
+        Button2_54 As button:
+            BorderColor: =RGBA(99, 139, 44, 1)
+            BorderThickness: =3
+            Fill: =RGBA(187, 221, 140, 1)
+            Height: =144
+            OnSelect: |-
+                =Navigate('FABRIC MILL');
+                Set(varCO,false) And Set(varN,false)
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Size: =18
+            Text: ="FABRIC MILL"
+            Width: =258
+            X: =44
+            Y: =711
+            ZIndex: =13
+
+        Button2_55 As button:
+            BorderColor: =RGBA(221, 79, 14, 1)
+            BorderThickness: =3
+            Fill: =RGBA(250, 155, 112, 1)
+            Height: =144
+            RadiusBottomLeft: =50
+            RadiusBottomRight: =50
+            RadiusTopLeft: =50
+            RadiusTopRight: =50
+            Size: =18
+            Text: ="SE"
+            Width: =258
+            X: =340
+            Y: =535
+            ZIndex: =14
+

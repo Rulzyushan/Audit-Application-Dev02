@@ -1,0 +1,92 @@
+{
+  "0c075621-7f01-4907-88e0-8657d44cd423": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/shgogna/globalperconnector-train1/1.0.1639.3310/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://massl.sharepoint.com/sites/LineaIntimo/IEDigitalization": {
+        "dataSources": {
+          "Audit App 5S Image collection": {
+            "tableName": "e0708273-7d4c-4902-8e4a-933901288095"
+          },
+          "Audit App 5S Updated": {
+            "tableName": "cbbd2d4d-9576-4581-8515-3d7042f4812e"
+          },
+          "Audit App 5S Updated_1": {
+            "tableName": "cbbd2d4d-9576-4581-8515-3d7042f4812e"
+          },
+          "Audit App Fabric Mill - New Style": {
+            "tableName": "0bada93c-1f1b-4749-8dc9-a19db8b1c46d"
+          },
+          "Audit App Fabric Mill - Operation Audit": {
+            "tableName": "8e28579e-c2a7-4079-92d7-d1bcbca7072e"
+          },
+          "Audit App STW": {
+            "tableName": "407001b2-acaa-4f55-b7d9-943e304827d4"
+          },
+          "Audit App STW Update": {
+            "tableName": "204056df-fd1b-47ac-a97c-3aa5c7643e86"
+          },
+          "Audit App Usage": {
+            "tableName": "40ddceb1-fb79-4815-988a-82492f994428"
+          },
+          "Audit App VE unit of flow Audit": {
+            "tableName": "8d083160-ae97-450f-a89b-2be42f5ee69b"
+          },
+          "Audit App VE unit of flow section and module": {
+            "tableName": "bfd1fdb4-3356-4522-b488-b33aea3cd64b"
+          },
+          "IE Department Name list": {
+            "tableName": "e04ed66a-917d-4753-9d49-b3e9d545da5c"
+          },
+          "Lockup Details": {
+            "tableName": "2b1df5cc-83fa-46c6-95b0-d76fccb62fac"
+          },
+          "Section And Module": {
+            "tableName": "733cf7d7-d707-40fb-94b0-103039053eea"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Audit App 5S Updated",
+      "IE Department Name list",
+      "Audit App 5S Image collection",
+      "Audit App Fabric Mill - Operation Audit",
+      "Audit App Fabric Mill - New Style",
+      "Audit App VE unit of flow Audit",
+      "Audit App VE unit of flow section and module",
+      "Audit App STW",
+      "Audit App Usage",
+      "Audit App 5S Updated_1",
+      "Audit App STW Update",
+      "Section And Module",
+      "Lockup Details"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "0c075621-7f01-4907-88e0-8657d44cd423"
+  },
+  "f711c02f-c441-4c27-96e0-158311dd1f12": {
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Outlook",
+      "iconUri": "https://connectoricons-prod.azureedge.net/u/laborbol/partial-builds/390724148/1.0.1641.3326/office365/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Outlook"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "f711c02f-c441-4c27-96e0-158311dd1f12"
+  }
+}

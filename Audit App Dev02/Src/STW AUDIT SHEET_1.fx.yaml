@@ -1,0 +1,4178 @@
+"'STW AUDIT SHEET_1' As screen":
+
+    Label1_26 As label:
+        Align: =Align.Right
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(141, 198, 63, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =67
+        Size: =20
+        Text: =""
+        Width: =640
+        Y: =1069
+        ZIndex: =1
+
+    Label1_24 As label:
+        Align: =Align.Right
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(141, 198, 63, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =67
+        Size: =20
+        Text: ="STW Audit  "
+        Width: =640
+        Y: =16
+        ZIndex: =3
+
+    Image1_8 As image:
+        Height: =39
+        Image: ='mas-holdings-logo-2ACA338CD6-seeklogo.com'
+        Width: =184
+        X: =13
+        Y: =34
+        ZIndex: =4
+
+    Label2_29 As label:
+        Align: =Align.Right
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =37
+        Text: ="IE DIGITALIZATION"
+        Width: =180
+        X: =436
+        Y: =1099
+        ZIndex: =6
+
+    Label2_28 As label:
+        Align: =Align.Right
+        FontWeight: =FontWeight.Semibold
+        Height: =37
+        Size: =12
+        Text: ="Designed by "
+        X: =466
+        Y: =1076
+        ZIndex: =7
+
+    Icon1_11 As icon.BackArrow:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.Home
+        OnSelect: =Navigate('AUDIT APPLICATION')
+        Width: =40
+        X: =26
+        Y: =1085
+        ZIndex: =8
+
+    Gallery4_2 As gallery.galleryHorizontal:
+        DelayItemLoading: =true
+        Height: =45
+        Items: |-
+            =Table(
+                {ID:1,Label:""},{ID:2,Label:""},{ID:3,Label:""},{ID:4,Label:""},{ID:5,Label:""},{ID:6,Label:""},
+                {ID:7,Label:""},{ID:8,Label:""},{ID:9,Label:""},{ID:10,Label:""},{ID:11,Label:""},{ID:12,Label:""},
+                {ID:13,Label:""},{ID:14,Label:""},{ID:15,Label:""},{ID:16,Label:""},{ID:17,Label:""},
+                {ID:18,Label:""},{ID:19,Label:""},{ID:20,Label:""},{ID:21,Label:""}
+            )
+        LoadingSpinner: =LoadingSpinner.Data
+        TemplateSize: =108
+        Visible: =false
+        Y: =83
+        ZIndex: =9
+
+        Button6_4 As button:
+            Height: =28
+            OnSelect: =Set(varTabSelectedSTW,ThisItem.ID)
+            Size: =24
+            Text: =""
+            Width: =108
+            Y: =2
+            ZIndex: =1
+
+    Button3_1 As button:
+        Fill: =RGBA(102, 113, 166, 1)
+        FontWeight: =FontWeight.Normal
+        Height: =48
+        OnSelect: |-
+            =If(
+                !IsBlank(DataCardValue123.SelectedDate) && !IsBlank(DataCardValue124.Selected.Value) && !IsBlank(DataCardValue125.Selected.Value) && !IsBlank(DataCardValue126.Selected.Value) && !IsBlank(DataCardValue127) && !IsBlank(DataCardValue129) && !IsBlank(DataCardValue130) && !IsBlank(DataCardValue131) && !IsBlank(DataCardValue132),
+            Set(varTabSelectedSTW,3),
+            Notify("Please enter the Required fields",NotificationType.Error)
+            )
+        Size: =21
+        Text: ="Next"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =varTabSelectedSTW=2
+        Width: =100
+        X: =516
+        Y: =980
+        ZIndex: =11
+
+    Button3_11 As button:
+        Fill: =RGBA(102, 113, 166, 1)
+        FontWeight: =FontWeight.Normal
+        Height: =48
+        OnSelect: |+
+            =If(
+                !IsBlank(DataCardValue98) && !IsBlank(DataCardValue101) && !IsBlank(DataCardValue102) && !IsBlank(DataCardValue104) && !IsBlank(DataCardValue119) && !IsBlank(DataCardValue120) && !IsBlank(DataCardValue121) && !IsBlank(DataCardValue122) && !IsBlank(DataCardValue124),
+            Set(varTabSelectedSTW,6),
+            Notify("Please enter the Required fields Section 1",NotificationType.Error)
+            )
+            
+        Size: =21
+        Text: ="Next"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =varTabSelectedSTW=5
+        Width: =100
+        X: =516
+        Y: =980
+        ZIndex: =13
+
+    Button3_12 As button:
+        Fill: =RGBA(102, 113, 166, 1)
+        FontWeight: =FontWeight.Normal
+        Height: =48
+        OnSelect: |+
+            =If(
+                !IsBlank(DataCardValue145) && !IsBlank(DataCardValue146) && !IsBlank(DataCardValue147) && !IsBlank(DataCardValue149) && !IsBlank(DataCardValue150) && !IsBlank(DataCardValue151) && !IsBlank(DataCardValue152) && !IsBlank(DataCardValue153) && !IsBlank(DataCardValue154),
+            Set(varTabSelectedSTW,5),
+            Notify("Please enter the Required fields Section 1",NotificationType.Error)
+            )
+            
+        Size: =21
+        Text: ="Next"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =varTabSelectedSTW=4
+        Width: =100
+        X: =516
+        Y: =980
+        ZIndex: =14
+
+    Button3_13 As button:
+        Fill: =RGBA(102, 113, 166, 1)
+        FontWeight: =FontWeight.Normal
+        Height: =48
+        OnSelect: |+
+            =If(
+                !IsBlank(DataCardValue133) && !IsBlank(DataCardValue134) && !IsBlank(DataCardValue135) && !IsBlank(DataCardValue137) && !IsBlank(DataCardValue138) && !IsBlank(DataCardValue139) && !IsBlank(DataCardValue140) && !IsBlank(DataCardValue141) && !IsBlank(DataCardValue142),
+            Set(varTabSelectedSTW,4),
+            Notify("Please enter the Required fields",NotificationType.Error)
+            )
+            
+        Size: =21
+        Text: ="Next"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =varTabSelectedSTW=3
+        Width: =100
+        X: =516
+        Y: =980
+        ZIndex: =15
+
+    Button3_8 As button:
+        Fill: =RGBA(102, 113, 166, 1)
+        FontWeight: =FontWeight.Normal
+        Height: =48
+        OnSelect: =Set(varTabSelectedSTW,2)
+        Size: =21
+        Text: ="Back"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =varTabSelectedSTW=3
+        Width: =100
+        X: =396
+        Y: =980
+        ZIndex: =16
+
+    Button3_9 As button:
+        Fill: =RGBA(102, 113, 166, 1)
+        FontWeight: =FontWeight.Normal
+        Height: =48
+        OnSelect: =Set(varTabSelectedSTW,3)
+        Size: =21
+        Text: ="Back"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =varTabSelectedSTW=4
+        Width: =100
+        X: =396
+        Y: =980
+        ZIndex: =17
+
+    Button3_10 As button:
+        Fill: =RGBA(102, 113, 166, 1)
+        FontWeight: =FontWeight.Normal
+        Height: =48
+        OnSelect: =Set(varTabSelectedSTW,4)
+        Size: =21
+        Text: ="Back"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =varTabSelectedSTW=5
+        Width: =100
+        X: =396
+        Y: =980
+        ZIndex: =18
+
+    Label1_6 As label:
+        AutoHeight: =true
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(141, 198, 63, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =50
+        Size: =21
+        Text: ="Maintain WIP in the module"
+        Visible: =varTabSelectedSTW = 2
+        Width: =580
+        X: =30
+        Y: =464
+        ZIndex: =19
+
+    Label1_7 As label:
+        AutoHeight: =true
+        Fill: =RGBA(204, 208, 225, 1)
+        Height: =201
+        Size: =21
+        Text: |-
+            ="In seated module WIP should be less than or equal to 5pcs/bundle as defined in STW sheet
+            In dancing module unit should be maintained"
+        Visible: =varTabSelectedSTW = 2
+        Width: =580
+        X: =30
+        Y: =517
+        ZIndex: =20
+
+    FormSTW_Audit_updated As form:
+        DataSource: ='Audit App STW Update'
+        Fill: =RGBA(204, 208, 225, 1)
+        Height: =859
+        OnFailure: =Notify("Form does not submit",NotificationType.Error)
+        OnSuccess: |-
+            =Notify("You Have Succussfully entered data",NotificationType.Success);
+            ResetForm(FormSTW_Audit_updated);
+            NewForm(FormSTW_Audit_updated)
+        Width: =640
+        Y: =91
+        ZIndex: =21
+
+        "'Maintain WIP Packing_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Maintain_x0020_WIP_x0020_Packing"
+            Default: =ThisItem.'Maintain WIP Packing'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"Maintain_x0020_WIP_x0020_Packing")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue130.Selected
+            Visible: =varTabSelectedSTW = 2
+            Width: =640
+            X: =0
+            Y: =7
+            ZIndex: =1
+
+            DataCardKey131 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =394
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage131 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue130.Y + DataCardValue130.Height
+                ZIndex: =3
+
+            StarVisible90 As label:
+                Align: =Align.Center
+                Height: =DataCardKey131.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey131.Y
+                ZIndex: =4
+
+            DataCardValue130 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'Maintain WIP Packing'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'Maintain WIP Packing')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =430
+                ZIndex: =5
+
+        "'Maintain WIP FG_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Maintain_x0020_WIP_x0020_FG"
+            Default: =ThisItem.'Maintain WIP FG'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"Maintain_x0020_WIP_x0020_FG")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue131.Selected
+            Visible: =varTabSelectedSTW = 2
+            Width: =640
+            X: =0
+            Y: =8
+            ZIndex: =1
+
+            DataCardKey132 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =394
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage132 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue131.Y + DataCardValue131.Height
+                ZIndex: =3
+
+            StarVisible91 As label:
+                Align: =Align.Center
+                Height: =DataCardKey132.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey132.Y
+                ZIndex: =4
+
+            DataCardValue131 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'Maintain WIP FG'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'Maintain WIP FG')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =430
+                ZIndex: =5
+
+        "'Maintain WIP Inline_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Maintain_x0020_WIP_x0020_Inline"
+            Default: =ThisItem.'Maintain WIP Inline'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"Maintain_x0020_WIP_x0020_Inline")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue132.Selected
+            Visible: =varTabSelectedSTW = 2
+            Width: =640
+            X: =0
+            Y: =9
+            ZIndex: =1
+
+            DataCardKey133 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =394
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage133 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue132.Y + DataCardValue132.Height
+                ZIndex: =3
+
+            StarVisible92 As label:
+                Align: =Align.Center
+                Height: =DataCardKey133.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey133.Y
+                ZIndex: =4
+
+            DataCardValue132 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'Maintain WIP Inline'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'Maintain WIP Inline')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =430
+                ZIndex: =5
+
+        "'TM1 Name_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TM1_x0020_Name"
+            Default: =ThisItem.'TM1 Name'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"TM1_x0020_Name")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "TM1_x0020_Name")
+            Required: =false
+            Update: =DataCardValue133.Text
+            Visible: =varTabSelectedSTW = 3
+            Width: =640
+            X: =0
+            Y: =10
+            ZIndex: =1
+
+            DataCardKey134 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue133 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey134.X + DataCardKey134.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage134 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue133.Y + DataCardValue133.Height
+                ZIndex: =3
+
+            StarVisible94 As label:
+                Align: =Align.Center
+                Height: =DataCardKey134.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey134.Y
+                ZIndex: =4
+
+        "'TM1 EPF No_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TM1_x0020_EPF_x0020_No"
+            Default: =ThisItem.'TM1 EPF No'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"TM1_x0020_EPF_x0020_No")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "TM1_x0020_EPF_x0020_No")
+            Required: =false
+            Update: =DataCardValue134.Text
+            Visible: =varTabSelectedSTW = 3
+            Width: =640
+            X: =0
+            Y: =11
+            ZIndex: =1
+
+            DataCardKey135 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue134 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey135.X + DataCardKey135.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage135 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue134.Y + DataCardValue134.Height
+                ZIndex: =3
+
+            StarVisible95 As label:
+                Align: =Align.Center
+                Height: =DataCardKey135.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey135.Y
+                ZIndex: =4
+
+        "'TM1 Operation_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TM1_x0020_Operation"
+            Default: =ThisItem.'TM1 Operation'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"TM1_x0020_Operation")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "TM1_x0020_Operation")
+            Required: =false
+            Update: =DataCardValue135.Text
+            Visible: =varTabSelectedSTW = 3
+            Width: =640
+            X: =0
+            Y: =12
+            ZIndex: =1
+
+            DataCardKey136 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue135 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey136.X + DataCardKey136.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage136 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue135.Y + DataCardValue135.Height
+                ZIndex: =3
+
+            StarVisible96 As label:
+                Align: =Align.Center
+                Height: =DataCardKey136.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey136.Y
+                ZIndex: =4
+
+        "'TM1 Total_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TM1_x0020_Total"
+            Default: =ThisItem.'TM1 Total'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"TM1_x0020_Total")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "TM1_x0020_Total")
+            Required: =false
+            Update: =DataCardValue136.Text
+            Visible: =varTabSelectedSTW = 3
+            Width: =640
+            X: =0
+            Y: =13
+            ZIndex: =1
+
+            DataCardKey137 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue136 As text:
+                Align: =Align.Center
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: |
+                    =DataCardValue137.Selected.Value +
+                    DataCardValue138.Selected.Value +
+                    DataCardValue139.Selected.Value +
+                    DataCardValue140.Selected.Value +
+                    DataCardValue141.Selected.Value +
+                    DataCardValue142.Selected.Value +
+                    DataCardValue143.Selected.Value +
+                    DataCardValue144.Selected.Value 
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey137.X + DataCardKey137.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage137 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue136.Y + DataCardValue136.Height
+                ZIndex: =3
+
+            StarVisible97 As label:
+                Align: =Align.Center
+                Height: =DataCardKey137.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey137.Y
+                ZIndex: =4
+
+        A1_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0041_1"
+            Default: =ThisItem.'T1-Operation Sequence is followed by the Team Member'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0041_1")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue137.Selected
+            Visible: =varTabSelectedSTW = 3
+            Width: =640
+            X: =0
+            Y: =14
+            ZIndex: =1
+
+            DataCardKey138 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =63
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =580
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage138 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue137.Y + DataCardValue137.Height
+                ZIndex: =3
+
+            StarVisible98 As label:
+                Align: =Align.Center
+                Height: =DataCardKey138.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey138.Y
+                ZIndex: =4
+
+            DataCardValue137 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T1-Operation Sequence is followed by the Team Member'.Value
+                Height: =86
+                Items: =Choices([@'Audit App STW Update'].'T1-Operation Sequence is followed by the Team Member')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =459
+                X: =151
+                Y: =78
+                ZIndex: =5
+
+        A2_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0041_2"
+            Default: =ThisItem.'T1-Safty steps are followed by the Team Member'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0041_2")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue138.Selected
+            Visible: =varTabSelectedSTW = 3
+            Width: =640
+            X: =0
+            Y: =15
+            ZIndex: =1
+
+            DataCardKey139 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage139 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue138.Y + DataCardValue138.Height
+                ZIndex: =3
+
+            StarVisible99 As label:
+                Align: =Align.Center
+                Height: =DataCardKey139.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey139.Y
+                ZIndex: =4
+
+            DataCardValue138 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T1-Safty steps are followed by the Team Member'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T1-Safty steps are followed by the Team Member')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                ZIndex: =5
+
+        A3_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0041_3"
+            Default: =ThisItem.'T1-Correct STW is used'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0041_3")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue139.Selected
+            Visible: =varTabSelectedSTW = 3
+            Width: =640
+            X: =0
+            Y: =16
+            ZIndex: =1
+
+            DataCardKey140 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage140 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue139.Y + DataCardValue139.Height
+                ZIndex: =3
+
+            StarVisible100 As label:
+                Align: =Align.Center
+                Height: =DataCardKey140.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey140.Y
+                ZIndex: =4
+
+            DataCardValue139 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T1-Correct STW is used'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T1-Correct STW is used')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                ZIndex: =5
+
+        A4_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0041_4"
+            Default: =ThisItem.'T1-Critical to Quality steps are known by the Team Member'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0041_4")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue140.Selected
+            Visible: =varTabSelectedSTW = 3
+            Width: =640
+            X: =0
+            Y: =17
+            ZIndex: =1
+
+            DataCardKey141 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10 + (DataCardValue140.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            ErrorMessage141 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue140.Y + DataCardValue140.Height
+                ZIndex: =3
+
+            StarVisible101 As label:
+                Align: =Align.Center
+                Height: =DataCardKey141.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey141.Y
+                ZIndex: =4
+
+            DataCardValue140 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T1-Critical to Quality steps are known by the Team Member'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T1-Critical to Quality steps are known by the Team Member')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                ZIndex: =5
+
+        A5_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0041_5"
+            Default: =ThisItem.'T1-Team Member achieve the Cycle Time'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0041_5")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue141.Selected
+            Visible: =varTabSelectedSTW = 3
+            Width: =640
+            X: =0
+            Y: =18
+            ZIndex: =1
+
+            DataCardKey142 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10 + (DataCardValue141.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            ErrorMessage142 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue141.Y + DataCardValue141.Height
+                ZIndex: =3
+
+            StarVisible102 As label:
+                Align: =Align.Center
+                Height: =DataCardKey142.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey142.Y
+                ZIndex: =4
+
+            DataCardValue141 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T1-Team Member achieve the Cycle Time'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T1-Team Member achieve the Cycle Time')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                Y: =10
+                ZIndex: =5
+
+        A6_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0041_6"
+            Default: =ThisItem.'T1-Checking 1 pcs per every 5 pcs is correctly followed (If mentioned 3 pcs followed accordingly)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0041_6")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue142.Selected
+            Visible: =varTabSelectedSTW = 3
+            Width: =640
+            X: =0
+            Y: =19
+            ZIndex: =1
+
+            DataCardKey143 As label:
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =146.96875
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                ZIndex: =1
+
+            ErrorMessage143 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue142.Y + DataCardValue142.Height
+                ZIndex: =3
+
+            StarVisible103 As label:
+                Align: =Align.Center
+                Height: =DataCardKey143.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey143.Y
+                ZIndex: =4
+
+            DataCardValue142 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T1-Checking 1 pcs per every 5 pcs is correctly followed (If mentioned 3 pcs followed accordingly)'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T1-Checking 1 pcs per every 5 pcs is correctly followed (If mentioned 3 pcs followed accordingly)')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                Y: =10
+                ZIndex: =5
+
+        A7_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0041_7"
+            Default: =ThisItem.'T1-Portion of the operation is balanced to another operation and Balanced tag is used to indicate it'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0041_7")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue143.Selected
+            Visible: =varTabSelectedSTW = 3
+            Width: =640
+            X: =0
+            Y: =20
+            ZIndex: =1
+
+            DataCardKey144 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(203, 102, 102, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage144 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue143.Y + DataCardValue143.Height
+                ZIndex: =3
+
+            StarVisible104 As label:
+                Align: =Align.Center
+                Height: =DataCardKey144.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey144.Y
+                ZIndex: =4
+
+            DataCardValue143 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T1-Portion of the operation is balanced to another operation and Balanced tag is used to indicate it'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T1-Portion of the operation is balanced to another operation and Balanced tag is used to indicate it')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                Y: =10
+                ZIndex: =5
+
+            Icon4_2 As icon.Reset:
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(77, 77, 77, 1)
+                Height: =40
+                Icon: =Icon.Reset
+                OnSelect: =Reset(DataCardValue143)
+                Width: =40
+                X: =546
+                Y: =149
+                ZIndex: =6
+
+        A8_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0041_8"
+            Default: =ThisItem.'T1-There is a problem when following up the STW and ANDON is raised'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0041_8")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue144.Selected
+            Visible: =varTabSelectedSTW = 3
+            Width: =640
+            X: =0
+            Y: =21
+            ZIndex: =1
+
+            DataCardKey145 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(203, 102, 102, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage145 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue144.Y + DataCardValue144.Height
+                ZIndex: =3
+
+            StarVisible105 As label:
+                Align: =Align.Center
+                Height: =DataCardKey145.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey145.Y
+                ZIndex: =4
+
+            DataCardValue144 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T1-There is a problem when following up the STW and ANDON is raised'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T1-There is a problem when following up the STW and ANDON is raised')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                Y: =20
+                ZIndex: =5
+
+            Icon4_3 As icon.Reset:
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(77, 77, 77, 1)
+                Height: =40
+                Icon: =Icon.Reset
+                OnSelect: =Reset(DataCardValue144)
+                Width: =40
+                X: =546
+                Y: =82
+                ZIndex: =6
+
+        "'TM2 Name_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TM2_x0020_Name"
+            Default: =ThisItem.'TM2 Name'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"TM2_x0020_Name")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "TM2_x0020_Name")
+            Required: =false
+            Update: =DataCardValue145.Text
+            Visible: =varTabSelectedSTW = 4
+            Width: =640
+            X: =0
+            Y: =22
+            ZIndex: =1
+
+            DataCardKey146 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue145 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey146.X + DataCardKey146.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage146 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue145.Y + DataCardValue145.Height
+                ZIndex: =3
+
+            StarVisible106 As label:
+                Align: =Align.Center
+                Height: =DataCardKey146.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey146.Y
+                ZIndex: =4
+
+        "'TM2 EPF No_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TM2_x0020_EPF_x0020_No"
+            Default: =ThisItem.'TM2 EPF No'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"TM2_x0020_EPF_x0020_No")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "TM2_x0020_EPF_x0020_No")
+            Required: =false
+            Update: =DataCardValue146.Text
+            Visible: =varTabSelectedSTW = 4
+            Width: =640
+            X: =0
+            Y: =23
+            ZIndex: =1
+
+            DataCardKey147 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue146 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey147.X + DataCardKey147.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage147 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue146.Y + DataCardValue146.Height
+                ZIndex: =3
+
+            StarVisible107 As label:
+                Align: =Align.Center
+                Height: =DataCardKey147.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey147.Y
+                ZIndex: =4
+
+        "'TM2 Operation_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TM2_x0020_Operation"
+            Default: =ThisItem.'TM2 Operation'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"TM2_x0020_Operation")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "TM2_x0020_Operation")
+            Required: =false
+            Update: =DataCardValue147.Text
+            Visible: =varTabSelectedSTW = 4
+            Width: =640
+            X: =0
+            Y: =24
+            ZIndex: =1
+
+            DataCardKey148 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue147 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey148.X + DataCardKey148.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage148 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue147.Y + DataCardValue147.Height
+                ZIndex: =3
+
+            StarVisible108 As label:
+                Align: =Align.Center
+                Height: =DataCardKey148.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey148.Y
+                ZIndex: =4
+
+        "'TM2 Total_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TM2_x0020_Total"
+            Default: =ThisItem.'TM2 Total'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"TM2_x0020_Total")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "TM2_x0020_Total")
+            Required: =false
+            Update: =DataCardValue148.Text
+            Visible: =varTabSelectedSTW = 4
+            Width: =640
+            X: =0
+            Y: =25
+            ZIndex: =1
+
+            DataCardKey149 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue148 As text:
+                Align: =Align.Center
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: |
+                    =DataCardValue149.Selected.Value +
+                    DataCardValue150.Selected.Value +
+                    DataCardValue151.Selected.Value +
+                    DataCardValue152.Selected.Value +
+                    DataCardValue153.Selected.Value +
+                    DataCardValue154.Selected.Value +
+                    DataCardValue155.Selected.Value +
+                    DataCardValue156.Selected.Value 
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey149.X + DataCardKey149.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage149 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue148.Y + DataCardValue148.Height
+                ZIndex: =3
+
+            StarVisible109 As label:
+                Align: =Align.Center
+                Height: =DataCardKey149.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey149.Y
+                ZIndex: =4
+
+        B1_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0042_1"
+            Default: =ThisItem.'T2-Operation Sequence is followed by the Team Member'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0042_1")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue149.Selected
+            Visible: =varTabSelectedSTW = 4
+            Width: =640
+            X: =0
+            Y: =26
+            ZIndex: =1
+
+            DataCardKey150 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =580
+                X: =30
+                Y: =10 + (DataCardValue149.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            ErrorMessage150 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue149.Y + DataCardValue149.Height
+                ZIndex: =3
+
+            StarVisible110 As label:
+                Align: =Align.Center
+                Height: =DataCardKey150.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey150.Y
+                ZIndex: =4
+
+            DataCardValue149 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T2-Operation Sequence is followed by the Team Member'.Value
+                Height: =71
+                Items: =Choices([@'Audit App STW Update'].'T2-Operation Sequence is followed by the Team Member')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =457
+                X: =167
+                Y: =78
+                ZIndex: =5
+
+        B2_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0042_2"
+            Default: =ThisItem.'T2-Safty steps are followed by the Team Member'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0042_2")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue150.Selected
+            Visible: =varTabSelectedSTW = 4
+            Width: =640
+            X: =0
+            Y: =27
+            ZIndex: =1
+
+            DataCardKey151 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage151 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue150.Y + DataCardValue150.Height
+                ZIndex: =3
+
+            StarVisible111 As label:
+                Align: =Align.Center
+                Height: =DataCardKey151.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey151.Y
+                ZIndex: =4
+
+            DataCardValue150 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T2-Safty steps are followed by the Team Member'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T2-Safty steps are followed by the Team Member')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                ZIndex: =5
+
+        B3_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0042_3"
+            Default: =ThisItem.'T2-Correct STW is used'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0042_3")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue151.Selected
+            Visible: =varTabSelectedSTW = 4
+            Width: =640
+            X: =0
+            Y: =28
+            ZIndex: =1
+
+            DataCardKey152 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage152 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue151.Y + DataCardValue151.Height
+                ZIndex: =3
+
+            StarVisible112 As label:
+                Align: =Align.Center
+                Height: =DataCardKey152.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey152.Y
+                ZIndex: =4
+
+            DataCardValue151 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T2-Correct STW is used'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T2-Correct STW is used')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                ZIndex: =5
+
+        B4_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0042_4"
+            Default: =ThisItem.'T2-Critical to Quality steps are known by the Team Member'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0042_4")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue152.Selected
+            Visible: =varTabSelectedSTW = 4
+            Width: =640
+            X: =0
+            Y: =29
+            ZIndex: =1
+
+            DataCardKey153 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage153 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue152.Y + DataCardValue152.Height
+                ZIndex: =3
+
+            StarVisible113 As label:
+                Align: =Align.Center
+                Height: =DataCardKey153.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey153.Y
+                ZIndex: =4
+
+            DataCardValue152 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T2-Critical to Quality steps are known by the Team Member'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T2-Critical to Quality steps are known by the Team Member')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                ZIndex: =5
+
+        B5_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0042_5"
+            Default: =ThisItem.'T2-Team Member achieve the Cycle Time'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0042_5")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue153.Selected
+            Visible: =varTabSelectedSTW = 4
+            Width: =640
+            X: =0
+            Y: =30
+            ZIndex: =1
+
+            DataCardKey154 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage154 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue153.Y + DataCardValue153.Height
+                ZIndex: =3
+
+            StarVisible114 As label:
+                Align: =Align.Center
+                Height: =DataCardKey154.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey154.Y
+                ZIndex: =4
+
+            DataCardValue153 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T2-Team Member achieve the Cycle Time'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T2-Team Member achieve the Cycle Time')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                ZIndex: =5
+
+        B6_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0042_6"
+            Default: =ThisItem.'T2-Checking 1 pcs per every 5 pcs is correctly followed (If mentioned 3 pcs followed accordingly)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0042_6")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue154.Selected
+            Visible: =varTabSelectedSTW = 4
+            Width: =640
+            X: =0
+            Y: =31
+            ZIndex: =1
+
+            DataCardKey155 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage155 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue154.Y + DataCardValue154.Height
+                ZIndex: =3
+
+            StarVisible115 As label:
+                Align: =Align.Center
+                Height: =DataCardKey155.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey155.Y
+                ZIndex: =4
+
+            DataCardValue154 As radio:
+                Default: =ThisItem.'T2-Checking 1 pcs per every 5 pcs is correctly followed (If mentioned 3 pcs followed accordingly)'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T2-Checking 1 pcs per every 5 pcs is correctly followed (If mentioned 3 pcs followed accordingly)')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                Y: =11
+                ZIndex: =5
+
+        B7_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0042_7"
+            Default: =ThisItem.'T2-Portion of the operation is balanced to another operation and Balanced tag is used to indicate it'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0042_7")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue155.Selected
+            Visible: =varTabSelectedSTW = 4
+            Width: =640
+            X: =0
+            Y: =32
+            ZIndex: =1
+
+            DataCardKey156 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(203, 102, 102, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage156 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue155.Y + DataCardValue155.Height
+                ZIndex: =3
+
+            StarVisible116 As label:
+                Align: =Align.Center
+                Height: =DataCardKey156.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey156.Y
+                ZIndex: =4
+
+            DataCardValue155 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T2-Portion of the operation is balanced to another operation and Balanced tag is used to indicate it'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T2-Portion of the operation is balanced to another operation and Balanced tag is used to indicate it')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                ZIndex: =5
+
+            Icon4_4 As icon.Reset:
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(77, 77, 77, 1)
+                Height: =40
+                Icon: =Icon.Reset
+                OnSelect: =Reset(DataCardValue155)
+                Width: =40
+                X: =546
+                Y: =149
+                ZIndex: =6
+
+        B8_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0042_8"
+            Default: =ThisItem.'T2-There is a problem when following up the STW and ANDON is raised'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0042_8")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue156.Selected
+            Visible: =varTabSelectedSTW = 4
+            Width: =640
+            X: =0
+            Y: =33
+            ZIndex: =1
+
+            DataCardKey157 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(203, 102, 102, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage157 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue156.Y + DataCardValue156.Height
+                ZIndex: =3
+
+            StarVisible117 As label:
+                Align: =Align.Center
+                Height: =DataCardKey157.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey157.Y
+                ZIndex: =4
+
+            DataCardValue156 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T2-There is a problem when following up the STW and ANDON is raised'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T2-There is a problem when following up the STW and ANDON is raised')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                ZIndex: =5
+
+            Icon4_5 As icon.Reset:
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(77, 77, 77, 1)
+                Height: =40
+                Icon: =Icon.Reset
+                OnSelect: =Reset(DataCardValue156)
+                Width: =40
+                X: =546
+                Y: =82
+                ZIndex: =6
+
+        "'TM3 Name_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TM3_x0020_Name"
+            Default: =ThisItem.'TM3 Name'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"TM3_x0020_Name")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "TM3_x0020_Name")
+            Required: =false
+            Update: =DataCardValue98.Text
+            Visible: =varTabSelectedSTW = 5
+            Width: =640
+            X: =0
+            Y: =34
+            ZIndex: =1
+
+            DataCardKey99 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10 
+                ZIndex: =1
+
+            DataCardValue98 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey99.X + DataCardKey99.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage99 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue98.Y + DataCardValue98.Height
+                ZIndex: =3
+
+            StarVisible3 As label:
+                Align: =Align.Center
+                Height: =DataCardKey99.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey99.Y
+                ZIndex: =4
+
+        "'TM3 EPF No_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TM3_x0020_EPF_x0020_No"
+            Default: =ThisItem.'TM3 EPF No'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"TM3_x0020_EPF_x0020_No")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "TM3_x0020_EPF_x0020_No")
+            Required: =false
+            Update: =DataCardValue101.Text
+            Visible: =varTabSelectedSTW = 5
+            Width: =640
+            X: =0
+            Y: =35
+            ZIndex: =1
+
+            DataCardKey102 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue101 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey102.X + DataCardKey102.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage102 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue101.Y + DataCardValue101.Height
+                ZIndex: =3
+
+            StarVisible4 As label:
+                Align: =Align.Center
+                Height: =DataCardKey102.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey102.Y
+                ZIndex: =4
+
+        "'TM3 Operation_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TM3_x0020_Operation"
+            Default: =ThisItem.'TM3 Operation'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"TM3_x0020_Operation")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "TM3_x0020_Operation")
+            Required: =false
+            Update: =DataCardValue102.Text
+            Visible: =varTabSelectedSTW = 5
+            Width: =640
+            X: =0
+            Y: =36
+            ZIndex: =1
+
+            DataCardKey103 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue102 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey103.X + DataCardKey103.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage103 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue102.Y + DataCardValue102.Height
+                ZIndex: =3
+
+            StarVisible6 As label:
+                Align: =Align.Center
+                Height: =DataCardKey103.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey103.Y
+                ZIndex: =4
+
+        "'TM3 Total_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TM3_x0020_Total"
+            Default: =ThisItem.'TM3 Total'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"TM3_x0020_Total")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "TM3_x0020_Total")
+            Required: =false
+            Update: =DataCardValue103.Text
+            Visible: =varTabSelectedSTW = 5
+            Width: =640
+            X: =0
+            Y: =37
+            ZIndex: =1
+
+            DataCardKey104 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue103 As text:
+                Align: =Align.Center
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: |
+                    =DataCardValue104.Selected.Value +
+                    DataCardValue119.Selected.Value +
+                    DataCardValue120.Selected.Value +
+                    DataCardValue121.Selected.Value +
+                    DataCardValue122.Selected.Value +
+                    DataCardValue157.Selected.Value +
+                    DataCardValue158.Selected.Value +
+                    DataCardValue159.Selected.Value 
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey104.X + DataCardKey104.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage104 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue103.Y + DataCardValue103.Height
+                ZIndex: =3
+
+            StarVisible61 As label:
+                Align: =Align.Center
+                Height: =DataCardKey104.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey104.Y
+                ZIndex: =4
+
+        C1_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0043_1"
+            Default: =ThisItem.'T3-Operation Sequence is followed by the Team Member'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0043_1")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue104.Selected
+            Visible: =varTabSelectedSTW = 5
+            Width: =640
+            X: =0
+            Y: =38
+            ZIndex: =1
+
+            DataCardKey105 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =580
+                X: =30
+                Y: =10 + (DataCardValue104.Height / 2) - (Self.Height / 2)
+                ZIndex: =1
+
+            ErrorMessage105 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue104.Y + DataCardValue104.Height
+                ZIndex: =3
+
+            StarVisible63 As label:
+                Align: =Align.Center
+                Height: =DataCardKey105.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey105.Y
+                ZIndex: =4
+
+            DataCardValue104 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T3-Operation Sequence is followed by the Team Member'.Value
+                Height: =74
+                Items: =Choices([@'Audit App STW Update'].'T3-Operation Sequence is followed by the Team Member')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =475
+                X: =167
+                Y: =85
+                ZIndex: =5
+
+        C2_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0043_2"
+            Default: =ThisItem.'T3-Safty steps are followed by the Team Member'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0043_2")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue119.Selected
+            Visible: =varTabSelectedSTW = 5
+            Width: =640
+            X: =0
+            Y: =39
+            ZIndex: =1
+
+            DataCardKey120 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage120 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue119.Y + DataCardValue119.Height
+                ZIndex: =3
+
+            StarVisible67 As label:
+                Align: =Align.Center
+                Height: =DataCardKey120.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey120.Y
+                ZIndex: =4
+
+            DataCardValue119 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T3-Safty steps are followed by the Team Member'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T3-Safty steps are followed by the Team Member')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                Y: =10
+                ZIndex: =5
+
+        C3_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0043_3"
+            Default: =ThisItem.'T3-Correct STW is used'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0043_3")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue120.Selected
+            Visible: =varTabSelectedSTW = 5
+            Width: =640
+            X: =0
+            Y: =40
+            ZIndex: =1
+
+            DataCardKey121 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage121 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue120.Y + DataCardValue120.Height
+                ZIndex: =3
+
+            StarVisible70 As label:
+                Align: =Align.Center
+                Height: =DataCardKey121.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey121.Y
+                ZIndex: =4
+
+            DataCardValue120 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T3-Correct STW is used'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T3-Correct STW is used')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                Y: =10
+                ZIndex: =5
+
+        C4_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0043_4"
+            Default: =ThisItem.'T3-Critical to Quality steps are known by the Team Member'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0043_4")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue121.Selected
+            Visible: =varTabSelectedSTW = 5
+            Width: =640
+            X: =0
+            Y: =41
+            ZIndex: =1
+
+            DataCardKey122 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage122 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue121.Y + DataCardValue121.Height
+                ZIndex: =3
+
+            StarVisible71 As label:
+                Align: =Align.Center
+                Height: =DataCardKey122.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey122.Y
+                ZIndex: =4
+
+            DataCardValue121 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T3-Critical to Quality steps are known by the Team Member'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T3-Critical to Quality steps are known by the Team Member')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                ZIndex: =5
+
+        C5_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0043_5"
+            Default: =ThisItem.'T3-Team Member achieve the Cycle Time'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0043_5")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue122.Selected
+            Visible: =varTabSelectedSTW = 5
+            Width: =640
+            X: =0
+            Y: =42
+            ZIndex: =1
+
+            DataCardKey123 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage123 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue122.Y + DataCardValue122.Height
+                ZIndex: =3
+
+            StarVisible72 As label:
+                Align: =Align.Center
+                Height: =DataCardKey123.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey123.Y
+                ZIndex: =4
+
+            DataCardValue122 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T3-Team Member achieve the Cycle Time'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T3-Team Member achieve the Cycle Time')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                ZIndex: =5
+
+        C6_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0043_6"
+            Default: =ThisItem.'T3-Checking 1 pcs per every 5 pcs is correctly followed (If mentioned 3 pcs followed accordingly)'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0043_6")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue157.Selected
+            Visible: =varTabSelectedSTW = 5
+            Width: =640
+            X: =0
+            Y: =43
+            ZIndex: =1
+
+            DataCardKey158 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage158 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue157.Y + DataCardValue157.Height
+                ZIndex: =3
+
+            StarVisible118 As label:
+                Align: =Align.Center
+                Height: =DataCardKey158.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey158.Y
+                ZIndex: =4
+
+            DataCardValue157 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T3-Checking 1 pcs per every 5 pcs is correctly followed (If mentioned 3 pcs followed accordingly)'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T3-Checking 1 pcs per every 5 pcs is correctly followed (If mentioned 3 pcs followed accordingly)')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =393
+                ZIndex: =5
+
+        C7_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0043_7"
+            Default: =ThisItem.'T3-Portion of the operation is balanced to another operation and Balanced tag is used to indicate it'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0043_7")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue158.Selected
+            Visible: =varTabSelectedSTW = 5
+            Width: =640
+            X: =0
+            Y: =44
+            ZIndex: =1
+
+            DataCardKey159 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(203, 102, 102, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage159 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue158.Y + DataCardValue158.Height
+                ZIndex: =3
+
+            StarVisible119 As label:
+                Align: =Align.Center
+                Height: =DataCardKey159.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey159.Y
+                ZIndex: =4
+
+            DataCardValue158 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T3-Portion of the operation is balanced to another operation and Balanced tag is used to indicate it'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T3-Portion of the operation is balanced to another operation and Balanced tag is used to indicate it')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =387
+                ZIndex: =5
+
+            Icon4 As icon.Reset:
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(77, 77, 77, 1)
+                Height: =40
+                Icon: =Icon.Reset
+                OnSelect: =Reset(DataCardValue158)
+                Width: =40
+                X: =546
+                Y: =149
+                ZIndex: =6
+
+        C8_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0043_8"
+            Default: =ThisItem.'T3-There is a problem when following up the STW and ANDON is raised'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0043_8")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue159.Selected
+            Visible: =varTabSelectedSTW = 5
+            Width: =640
+            X: =0
+            Y: =45
+            ZIndex: =1
+
+            DataCardKey160 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(203, 102, 102, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage160 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue159.Y + DataCardValue159.Height
+                ZIndex: =3
+
+            StarVisible120 As label:
+                Align: =Align.Center
+                Height: =DataCardKey160.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey160.Y
+                ZIndex: =4
+
+            DataCardValue159 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'T3-There is a problem when following up the STW and ANDON is raised'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'T3-There is a problem when following up the STW and ANDON is raised')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =385
+                ZIndex: =5
+
+            Icon4_1 As icon.Reset:
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(77, 77, 77, 1)
+                Height: =40
+                Icon: =Icon.Reset
+                OnSelect: =Reset(DataCardValue159)
+                Width: =40
+                X: =546
+                Y: =82
+                ZIndex: =6
+
+        D1_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0044_1"
+            Default: =ThisItem.'Team Leader has conducted audit for rework marked Operation'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0044_1")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue160.Selected
+            Visible: =varTabSelectedSTW = 6
+            Width: =640
+            X: =0
+            Y: =46
+            ZIndex: =1
+
+            DataCardKey161 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage161 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue160.Y + DataCardValue160.Height
+                ZIndex: =3
+
+            StarVisible121 As label:
+                Align: =Align.Center
+                Height: =DataCardKey161.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey161.Y
+                ZIndex: =4
+
+            DataCardValue160 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'Team Leader has conducted audit for rework marked Operation'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'Team Leader has conducted audit for rework marked Operation')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =400
+                ZIndex: =5
+
+        D2_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0044_2"
+            Default: =ThisItem.'Team Leader has conducted internal audits during last five days'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0044_2")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue161.Selected
+            Visible: =varTabSelectedSTW = 6
+            Width: =640
+            X: =0
+            Y: =47
+            ZIndex: =1
+
+            DataCardKey162 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage162 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue161.Y + DataCardValue161.Height
+                ZIndex: =3
+
+            StarVisible122 As label:
+                Align: =Align.Center
+                Height: =DataCardKey162.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey162.Y
+                ZIndex: =4
+
+            DataCardValue161 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'Team Leader has conducted internal audits during last five days'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'Team Leader has conducted internal audits during last five days')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =400
+                ZIndex: =5
+
+        D3_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0044_3"
+            Default: =ThisItem.'TL Knowledge About takt time'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0044_3")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue162.Selected
+            Visible: =varTabSelectedSTW = 6
+            Width: =640
+            X: =0
+            Y: =48
+            ZIndex: =1
+
+            DataCardKey163 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage163 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue162.Y + DataCardValue162.Height
+                ZIndex: =3
+
+            StarVisible123 As label:
+                Align: =Align.Center
+                Height: =DataCardKey163.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey163.Y
+                ZIndex: =4
+
+            DataCardValue162 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'TL Knowledge About takt time'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'TL Knowledge About takt time')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =400
+                ZIndex: =5
+
+        D4_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="OData__x0044_4"
+            Default: =ThisItem.'Quality Status of the Operation                         *If the Rework Percentage is 1.5% or less - Marks to be given is 10*                    *If the Rework Percentage is above 1.5%   - Marks to be given is 00*'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"OData__x0044_4")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue163.Selected
+            Visible: =varTabSelectedSTW = 6
+            Width: =640
+            X: =0
+            Y: =49
+            ZIndex: =1
+
+            DataCardKey164 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =350
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage164 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue163.Y + DataCardValue163.Height
+                ZIndex: =3
+
+            StarVisible124 As label:
+                Align: =Align.Center
+                Height: =DataCardKey164.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey164.Y
+                ZIndex: =4
+
+            DataCardValue163 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'Quality Status of the Operation                         *If the Rework Percentage is 1.5% or less - Marks to be given is 10*                    *If the Rework Percentage is above 1.5%   - Marks to be given is 00*'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'Quality Status of the Operation                         *If the Rework Percentage is 1.5% or less - Marks to be given is 10*                    *If the Rework Percentage is above 1.5%   - Marks to be given is 00*')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =400
+                ZIndex: =5
+
+            Label6 As label:
+                Fill: =RGBA(255, 255, 255, 1)
+                FontWeight: =FontWeight.Semibold
+                Height: =50
+                Size: =15
+                Text: =Text((If(IsBlank(TextInput1),1,TextInput1)/If(IsBlank(TextInput1_1),1,TextInput1_1))*100, ".00")
+                Visible: =varTabSelectedSTW = 6
+                Width: =142
+                X: =478
+                Y: =217
+                ZIndex: =10
+
+            Group3 As group:
+                Height: =5
+                Width: =5
+                X: =40
+                Y: =40
+                ZIndex: =10
+
+                TextInput1 As text:
+                    BorderThickness: =0
+                    Default: =
+                    FontWeight: =FontWeight.Semibold
+                    Format: =TextFormat.Number
+                    Height: =50
+                    Size: =15
+                    Visible: =varTabSelectedSTW =6
+                    Width: =110
+                    X: =390
+                    Y: =149
+                    ZIndex: =6
+
+                TextInput1_1 As text:
+                    BorderThickness: =0
+                    Default: =
+                    FontWeight: =FontWeight.Semibold
+                    Format: =TextFormat.Number
+                    Height: =50
+                    HintText: =""
+                    Size: =15
+                    Visible: =varTabSelectedSTW =6
+                    Width: =110
+                    X: =510
+                    Y: =149
+                    ZIndex: =7
+
+                Label3_14 As label:
+                    Fill: =RGBA(167, 182, 203, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =46
+                    Size: =15
+                    Text: |-
+                        ="#Reworks"
+                    Visible: =varTabSelectedSTW =6
+                    Width: =110
+                    X: =390
+                    Y: =89
+                    ZIndex: =8
+
+                Label3_15 As label:
+                    Fill: =RGBA(167, 182, 203, 1)
+                    FontWeight: =FontWeight.Semibold
+                    Height: =46
+                    Size: =15
+                    Text: |-
+                        ="#PCS"
+                    Visible: =varTabSelectedSTW =6
+                    Width: =110
+                    X: =510
+                    Y: =89
+                    ZIndex: =9
+
+        "'Total Marks_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TotalMarks"
+            Default: =ThisItem.'Total Marks'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"TotalMarks")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "TotalMarks")
+            Required: =false
+            Update: =DataCardValue164.Text
+            Visible: =varTabSelectedSTW = 6
+            Width: =640
+            X: =0
+            Y: =50
+            ZIndex: =1
+
+            DataCardKey165 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue164 As text:
+                Align: =Align.Center
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: |
+                    =Text(((DataCardValue128 + DataCardValue136 + DataCardValue148 + DataCardValue103 + DataCardValue160.Selected.Value +
+                    DataCardValue161.Selected.Value + DataCardValue162.Selected.Value + DataCardValue163.Selected.Value)/
+                    ((210 + DataCardValue143.Selected.Value + DataCardValue144.Selected.Value + DataCardValue155.Selected.Value + DataCardValue156.Selected.Value + DataCardValue158.Selected.Value + DataCardValue159.Selected.Value)))*100,".00")
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey165.X + DataCardKey165.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage165 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue164.Y + DataCardValue164.Height
+                ZIndex: =3
+
+            StarVisible125 As label:
+                Align: =Align.Center
+                Height: =DataCardKey165.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey165.Y
+                ZIndex: =4
+
+        Comments_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Comments"
+            Default: =ThisItem.Comments
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"Comments")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "Comments")
+            Required: =false
+            Update: =DataCardValue165.Text
+            Visible: =varTabSelectedSTW = 6
+            Width: =640
+            X: =0
+            Y: =51
+            ZIndex: =1
+
+            DataCardKey166 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue165 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =108
+                MaxLength: =Parent.MaxLength
+                Mode: =TextMode.MultiLine
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey166.X + DataCardKey166.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage166 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue165.Y + DataCardValue165.Height
+                ZIndex: =3
+
+            StarVisible126 As label:
+                Align: =Align.Center
+                Height: =DataCardKey166.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey166.Y
+                ZIndex: =4
+
+        Date_DataCard3 As typedDataCard.dateEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Date"
+            Default: =ThisItem.Date
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"Date")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue123.SelectedDate
+            Visible: =varTabSelectedSTW = 2
+            Width: =640
+            X: =0
+            Y: =0
+            ZIndex: =22
+
+            DataCardKey124 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue123 As datepicker:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                DefaultDate: =Parent.Default
+                DisplayMode: =Parent.DisplayMode
+                EndYear: =Year(Today())+100
+                Height: =48
+                IsEditable: =true
+                PaddingBottom: =0
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                Size: =24
+                StartYear: =1899
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey124.X + DataCardKey124.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage124 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue123.Y + DataCardValue123.Height
+                ZIndex: =3
+
+            StarVisible80 As label:
+                Align: =Align.Center
+                Height: =DataCardKey124.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey124.Y
+                ZIndex: =4
+
+        Section_DataCard3 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Section"
+            Default: =ThisItem.Section
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"Section")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue124.Selected
+            Visible: =varTabSelectedSTW = 2
+            Width: =640
+            X: =0
+            Y: =1
+            ZIndex: =22
+
+            DataCardKey125 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue124 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                IsSearchable: =false
+                Items: =Choices([@'Audit App STW Update'].Section)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =[]
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey125.X + DataCardKey125.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage125 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue124.Y + DataCardValue124.Height
+                ZIndex: =3
+
+            StarVisible83 As label:
+                Align: =Align.Center
+                Height: =DataCardKey125.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey125.Y
+                ZIndex: =4
+
+        Module_DataCard2 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Module"
+            Default: =ThisItem.Module
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"Module")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue125.Selected
+            Visible: =varTabSelectedSTW = 2
+            Width: =640
+            X: =0
+            Y: =2
+            ZIndex: =22
+
+            DataCardKey126 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue125 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                Items: =Choices([@'Audit App STW Update'].Module)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Audit App STW Update'.Module,DataCardValue125.SearchText)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey126.X + DataCardKey126.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage126 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue125.Y + DataCardValue125.Height
+                ZIndex: =3
+
+            StarVisible85 As label:
+                Align: =Align.Center
+                Height: =DataCardKey126.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey126.Y
+                ZIndex: =4
+
+        "'Style Code_DataCard2' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Style_x0020_Code"
+            Default: =ThisItem.'Style Code'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"Style_x0020_Code")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue126.Selected
+            Visible: =varTabSelectedSTW = 2
+            Width: =640
+            X: =0
+            Y: =3
+            ZIndex: =22
+
+            DataCardKey127 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue126 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =48
+                Items: =Choices([@'Audit App STW Update'].'Style Code')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Audit App STW Update'.'Style Code',DataCardValue126.SearchText)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey127.X + DataCardKey127.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage127 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue126.Y + DataCardValue126.Height
+                ZIndex: =3
+
+            StarVisible86 As label:
+                Align: =Align.Center
+                Height: =DataCardKey127.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey127.Y
+                ZIndex: =4
+
+        "'Auditor EPF_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Auditor_x0020_EPF"
+            Default: =ThisItem.'Auditor EPF'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"Auditor_x0020_EPF")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "Auditor_x0020_EPF")
+            Required: =false
+            Update: =DataCardValue127.Text
+            Visible: =varTabSelectedSTW = 2
+            Width: =640
+            X: =0
+            Y: =4
+            ZIndex: =22
+
+            DataCardKey128 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.4
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue127 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =(Parent.Width - 60) * 0.6
+                X: =DataCardKey128.X + DataCardKey128.Width
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage128 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue127.Y + DataCardValue127.Height
+                ZIndex: =3
+
+            StarVisible87 As label:
+                Align: =Align.Center
+                Height: =DataCardKey128.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey128.Y
+                ZIndex: =4
+
+        "'Maintain WIP Total_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Maintain_x0020_WIP_x0020_Total"
+            Default: =ThisItem.'Maintain WIP Total'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"Maintain_x0020_WIP_x0020_Total")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App STW Update'], DataSourceInfo.MaxLength, "Maintain_x0020_WIP_x0020_Total")
+            Required: =false
+            Update: =DataCardValue128.Text
+            Visible: =varTabSelectedSTW = 2
+            Width: =640
+            X: =0
+            Y: =5
+            ZIndex: =22
+
+            DataCardKey129 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =394
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue128 As text:
+                Align: =Align.Center
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: |-
+                    =DataCardValue129.Selected.Value +
+                    DataCardValue130.Selected.Value +
+                    DataCardValue131.Selected.Value +
+                    DataCardValue132.Selected.Value
+                DelayOutput: =true
+                DisplayMode: =DisplayMode.View
+                Height: =48
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =185
+                X: =424
+                Y: =10
+                ZIndex: =2
+
+            ErrorMessage129 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue128.Y + DataCardValue128.Height
+                ZIndex: =3
+
+            StarVisible88 As label:
+                Align: =Align.Center
+                Height: =DataCardKey129.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey129.Y
+                ZIndex: =4
+
+        "'Maintain WIP Check_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Maintain_x0020_WIP_x0020_Check"
+            Default: =ThisItem.'Maintain WIP Check'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App STW Update'],DataSourceInfo.DisplayName,"Maintain_x0020_WIP_x0020_Check")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =DataCardValue129.Selected
+            Visible: =varTabSelectedSTW = 2
+            Width: =640
+            X: =0
+            Y: =6
+            ZIndex: =22
+
+            DataCardKey130 As label:
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(102, 113, 166, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =394
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            ErrorMessage130 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue129.Y + DataCardValue129.Height
+                ZIndex: =3
+
+            StarVisible89 As label:
+                Align: =Align.Center
+                Height: =DataCardKey130.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey130.Y
+                ZIndex: =4
+
+            DataCardValue129 As radio:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                Default: =ThisItem.'Maintain WIP Check'.Value
+                Height: =79
+                Items: =Choices([@'Audit App STW Update'].'Maintain WIP Check')
+                Layout: =Layout.Horizontal
+                RadioSize: =50
+                Size: =21
+                Width: =210
+                X: =430
+                ZIndex: =5
+
+    Button3_14 As button:
+        Fill: =RGBA(102, 113, 166, 1)
+        FontWeight: =FontWeight.Normal
+        Height: =48
+        OnSelect: |+
+            =If(
+                !IsBlank(DataCardValue160) && !IsBlank(DataCardValue161) && !IsBlank(DataCardValue162) && !IsBlank(DataCardValue163),
+            SubmitForm(FormSTW_Audit_updated),
+            Notify("Please enter the Required fields Section",NotificationType.Error)
+            )
+            
+        Size: =21
+        Text: ="Next"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =varTabSelectedSTW=6
+        Width: =100
+        X: =536
+        Y: =1000
+        ZIndex: =23
+
+    Button3_15 As button:
+        Fill: =RGBA(102, 113, 166, 1)
+        FontWeight: =FontWeight.Normal
+        Height: =48
+        OnSelect: =Set(varTabSelectedSTW,5)
+        Size: =21
+        Text: ="Back"
+        VerticalAlign: =VerticalAlign.Top
+        Visible: =varTabSelectedSTW=6
+        Width: =100
+        X: =416
+        Y: =1000
+        ZIndex: =24
+
+    Label4 As label:
+        Fill: =RGBA(202, 202, 202, 1)
+        Height: =101
+        Size: =15
+        Text: |-
+            ="*In seated module WIP should be less than or equal to 5pcs/bundle as defined in STW sheet
+            *In dancing module unit should be maintained"
+        Width: =580
+        X: =30
+        Y: =849
+        ZIndex: =25
+
+    Icon6_1 As icon.Settings:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.Settings
+        OnSelect: |-
+            =Navigate('STW AUDIT SHEET_SETTINGS');
+            Set(varAdminButton1,false);
+            Set(varSectionAndModule,false);
+            Set(varAdminMsg,false);
+            Set(varStyle,false)
+        Width: =40
+        X: =90
+        Y: =1085
+        ZIndex: =26
+

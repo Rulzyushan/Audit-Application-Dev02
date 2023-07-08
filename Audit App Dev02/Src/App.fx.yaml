@@ -1,0 +1,24 @@
+App As appinfo:
+    BackEnabled: =false
+    OnStart: |-
+        =Refresh('IE Department Name list');
+        
+        Patch(
+            'Audit App Usage',
+            Defaults('Audit App Usage'
+            ),
+            {
+                'App Usage': 1,
+                'App Name': "Audit App - IE"
+                
+            }
+        );
+    StartScreen: ='AUDIT APPLICATION'
+
+    Host As hostControl.DefaultHostControlVariant:
+        OnCancel: =false
+        OnEdit: =false
+        OnNew: =false
+        OnSave: =false
+        OnView: =false
+

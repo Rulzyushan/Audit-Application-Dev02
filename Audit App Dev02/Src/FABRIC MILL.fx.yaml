@@ -1,0 +1,1467 @@
+"'FABRIC MILL' As screen":
+    BackgroundImage: =
+
+    Label1_19 As label:
+        Align: =Align.Right
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(141, 198, 63, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =67
+        Size: =20
+        Text: =""
+        Width: =640
+        Y: =1069
+        ZIndex: =2
+
+    Label1_18 As label:
+        Align: =Align.Right
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledFill: =RGBA(141, 198, 63, 1)
+        Fill: =RGBA(0, 134, 208, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =67
+        Size: =20
+        Text: ="Audit  "
+        Width: =640
+        Y: =16
+        ZIndex: =3
+
+    Image1_5 As image:
+        Height: =39
+        Image: ='mas-holdings-logo-2ACA338CD6-seeklogo.com'
+        Width: =184
+        X: =13
+        Y: =30
+        ZIndex: =4
+
+    Label2_21 As label:
+        Align: =Align.Right
+        Color: =RGBA(179, 179, 179, 1)
+        FontWeight: =FontWeight.Bold
+        Height: =45
+        Size: =18
+        Text: ="ACTIVE LINEA INTIMO - IE"
+        Width: =316
+        X: =182
+        Y: =38
+        ZIndex: =5
+
+    Label2_22 As label:
+        Align: =Align.Right
+        Font: =Font.'Lato Black'
+        FontWeight: =FontWeight.Bold
+        Height: =37
+        Text: ="IE DIGITALIZATION"
+        Width: =180
+        X: =436
+        Y: =1099
+        ZIndex: =6
+
+    Label2_10 As label:
+        Align: =Align.Right
+        FontWeight: =FontWeight.Semibold
+        Height: =37
+        Size: =12
+        Text: ="Designed by "
+        X: =466
+        Y: =1076
+        ZIndex: =7
+
+    FormFabricMillCarryOver As form:
+        BorderThickness: =1
+        DataSource: ='Audit App Fabric Mill - Operation Audit'
+        Fill: =RGBA(204, 208, 225, 1)
+        Height: =863
+        NumberOfColumns: =2
+        Visible: =varCO
+        Width: =630
+        X: =5
+        Y: =183
+        ZIndex: =8
+
+        Style_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Style"
+            Default: =ThisItem.Style
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - Operation Audit'],DataSourceInfo.DisplayName,"Style")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App Fabric Mill - Operation Audit'], DataSourceInfo.MaxLength, "Style")
+            Required: =false
+            Update: =DataCardValue71.Text
+            Width: =314
+            X: =0
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey72 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue71 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                HintText: =""
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey72.Y + DataCardKey72.Height + 5
+                ZIndex: =2
+
+            ErrorMessage72 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue71.Y + DataCardValue71.Height
+                ZIndex: =3
+
+            StarVisible64 As label:
+                Align: =Align.Center
+                Height: =DataCardKey72.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey72.Y
+                ZIndex: =4
+
+        "'Standard Speed_DataCard1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="StdSpeed"
+            Default: =ThisItem.'Standard Speed'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - Operation Audit'],DataSourceInfo.DisplayName,"StdSpeed")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =Value(DataCardValue86.Text)
+            Width: =315
+            X: =0
+            Y: =4
+            ZIndex: =1
+
+            DataCardKey87 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue86 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey87.Y + DataCardKey87.Height + 5
+                ZIndex: =2
+
+            ErrorMessage87 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue86.Y + DataCardValue86.Height
+                ZIndex: =3
+
+        Size_DataCard1 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Size"
+            Default: =ThisItem.Size
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - Operation Audit'],DataSourceInfo.DisplayName,"Size")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValue61.Selected
+            Width: =314
+            X: =1
+            Y: =0
+            ZIndex: =9
+
+            DataCardKey61 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue61 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@'Audit App Fabric Mill - Operation Audit'].Size)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Audit App Fabric Mill - Operation Audit'.Size,DataCardValue61.SearchText)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey61.Y + DataCardKey61.Height + 5
+                ZIndex: =2
+
+            ErrorMessage61 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue61.Y + DataCardValue61.Height
+                ZIndex: =3
+
+        Component_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Component"
+            Default: =ThisItem.Component
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - Operation Audit'],DataSourceInfo.DisplayName,"Component")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App Fabric Mill - Operation Audit'], DataSourceInfo.MaxLength, "Component")
+            Required: =true
+            Update: =DataCardValue65.Text
+            Width: =315
+            X: =0
+            Y: =1
+            ZIndex: =9
+
+            DataCardKey64 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue65 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey64.Y + DataCardKey64.Height + 5
+                ZIndex: =2
+
+            ErrorMessage64 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue65.Y + DataCardValue65.Height
+                ZIndex: =3
+
+        Program_DataCard1 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Program"
+            Default: =ThisItem.Program
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - Operation Audit'],DataSourceInfo.DisplayName,"Program")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App Fabric Mill - Operation Audit'], DataSourceInfo.MaxLength, "Program")
+            Required: =false
+            Update: =DataCardValue66.Text
+            Width: =314
+            X: =1
+            Y: =1
+            ZIndex: =9
+
+            DataCardKey67 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue66 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey67.Y + DataCardKey67.Height + 5
+                ZIndex: =2
+
+            ErrorMessage67 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue66.Y + DataCardValue66.Height
+                ZIndex: =3
+
+            StarVisible5 As label:
+                Align: =Align.Center
+                Height: =DataCardKey67.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey67.Y
+                ZIndex: =4
+
+        "'Machine No_DataCard1' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="M_x002f_CNo"
+            Default: =ThisItem.'Machine No'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - Operation Audit'],DataSourceInfo.DisplayName,"M_x002f_CNo")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App Fabric Mill - Operation Audit'], DataSourceInfo.MaxLength, "M_x002f_CNo")
+            Required: =true
+            Update: =DataCardValue67.Text
+            Width: =314
+            X: =0
+            Y: =2
+            ZIndex: =9
+
+            DataCardKey68 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue67 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey68.Y + DataCardKey68.Height + 5
+                ZIndex: =2
+
+            ErrorMessage68 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue67.Y + DataCardValue67.Height
+                ZIndex: =3
+
+        "'Machine SMV_DataCard1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="M_x002f_CSMV"
+            Default: =ThisItem.'Machine SMV'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - Operation Audit'],DataSourceInfo.DisplayName,"M_x002f_CSMV")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =268
+            Required: =true
+            Update: =Value(DataCardValue68.Text)
+            Width: =315
+            X: =1
+            Y: =2
+            ZIndex: =9
+
+            DataCardKey69 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue68 As text:
+                Align: =Align.Center
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Sum('TextInput-Min','TextInput-Sec'/60)
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey69.Y + DataCardKey69.Height + 5
+                ZIndex: =2
+
+            ErrorMessage69 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue68.Y + DataCardValue68.Height
+                ZIndex: =3
+
+            "'TextInput-Min' As text":
+                Default: =" 1"
+                Format: =TextFormat.Number
+                Height: =42
+                Width: =100
+                X: =30
+                Y: =202
+                ZIndex: =4
+
+            "'TextInput-Sec' As text":
+                Default: =" 1"
+                Format: =TextFormat.Number
+                Height: =42
+                Width: =100
+                X: =185
+                Y: =202
+                ZIndex: =5
+
+        "'Ticket SMV T2_DataCard1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TicketSMVT2"
+            Default: =ThisItem.'Ticket SMV T2'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - Operation Audit'],DataSourceInfo.DisplayName,"TicketSMVT2")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =Value(DataCardValue69.Text)
+            Width: =314
+            X: =0
+            Y: =3
+            ZIndex: =9
+
+            DataCardKey70 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue69 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey70.Y + DataCardKey70.Height + 5
+                ZIndex: =2
+
+            ErrorMessage70 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue69.Y + DataCardValue69.Height
+                ZIndex: =3
+
+        "'Ticket SMV 2V_DataCard1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TicketSMV2V"
+            Default: =ThisItem.'Ticket SMV 2V'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - Operation Audit'],DataSourceInfo.DisplayName,"TicketSMV2V")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =Value(DataCardValue70.Text)
+            Width: =314
+            X: =1
+            Y: =3
+            ZIndex: =9
+
+            DataCardKey71 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue70 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey71.Y + DataCardKey71.Height + 5
+                ZIndex: =2
+
+            ErrorMessage71 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue70.Y + DataCardValue70.Height
+                ZIndex: =3
+
+    CarryOver As button:
+        BorderColor: =RGBA(0, 121, 187, 1)
+        BorderThickness: =3
+        Fill: =If(varCO = true,RGBA(102, 182, 227, 1),RGBA(149, 149, 149, 1))
+        Height: =67
+        OnSelect: |-
+            =NewForm(FormFabricMillCarryOver);
+            Set(varCO,true) And Set(varN,false)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =18
+        Text: ="CARRY OVER"
+        Width: =258
+        X: =34
+        Y: =96
+        ZIndex: =9
+
+    New As button:
+        BorderColor: =RGBA(0, 121, 187, 1)
+        BorderThickness: =3
+        Fill: =If(varN = true,RGBA(102, 182, 227, 1),RGBA(149, 149, 149, 1))
+        Height: =67
+        OnSelect: |-
+            =NewForm(FormFabricMillNew);
+            Set(varCO,false) And Set(varN,true)
+        RadiusBottomLeft: =50
+        RadiusBottomRight: =50
+        RadiusTopLeft: =50
+        RadiusTopRight: =50
+        Size: =18
+        Text: ="NEW"
+        Width: =258
+        X: =347
+        Y: =96
+        ZIndex: =10
+
+    FormFabricMillNew As form:
+        BorderThickness: =1
+        DataSource: ='Audit App Fabric Mill - New Style'
+        Fill: =RGBA(153, 160, 196, 1)
+        Height: =863
+        NumberOfColumns: =2
+        Visible: =varN
+        Width: =640
+        Y: =183
+        ZIndex: =11
+
+        Size_DataCard2 As typedDataCard.comboBoxEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Size"
+            Default: =ThisItem.Size
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - New Style'],DataSourceInfo.DisplayName,"Size")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValue91.Selected
+            Width: =319
+            X: =1
+            Y: =0
+            ZIndex: =1
+
+            DataCardKey92 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue91 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@'Audit App Fabric Mill - New Style'].Size)
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Audit App Fabric Mill - New Style'.Size,DataCardValue91.SearchText)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey92.Y + DataCardKey92.Height + 5
+                ZIndex: =2
+
+            ErrorMessage92 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue91.Y + DataCardValue91.Height
+                ZIndex: =3
+
+        "'Standard Speed_DataCard2' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="StandardSpeed"
+            Default: =ThisItem.'Standard Speed'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - New Style'],DataSourceInfo.DisplayName,"StandardSpeed")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =Value(DataCardValue92.Text)
+            Width: =319
+            X: =1
+            Y: =1
+            ZIndex: =1
+
+            DataCardKey93 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue92 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey93.Y + DataCardKey93.Height + 5
+                ZIndex: =2
+
+            ErrorMessage93 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue92.Y + DataCardValue92.Height
+                ZIndex: =3
+
+        "'Tech Pack SMV_DataCard1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="TechPackSMV"
+            Default: =ThisItem.'Tech Pack SMV'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - New Style'],DataSourceInfo.DisplayName,"TechPackSMV")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =false
+            Update: =Value(DataCardValue96.Text)
+            Width: =319
+            X: =0
+            Y: =2
+            ZIndex: =1
+
+            DataCardKey97 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue96 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey97.Y + DataCardKey97.Height + 5
+                ZIndex: =2
+
+            ErrorMessage97 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue96.Y + DataCardValue96.Height
+                ZIndex: =3
+
+            StarVisible84 As label:
+                Align: =Align.Center
+                Height: =DataCardKey97.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey97.Y
+                ZIndex: =4
+
+        Style_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Style"
+            Default: =ThisItem.Style
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - New Style'],DataSourceInfo.DisplayName,"Style")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App Fabric Mill - New Style'], DataSourceInfo.MaxLength, "Style")
+            Required: =true
+            Update: =DataCardValue78.Text
+            Width: =319
+            X: =0
+            Y: =0
+            ZIndex: =12
+
+            DataCardKey79 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue78 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey79.Y + DataCardKey79.Height + 5
+                ZIndex: =2
+
+            ErrorMessage79 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue78.Y + DataCardValue78.Height
+                ZIndex: =3
+
+        Component_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Component"
+            Default: =ThisItem.Component
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - New Style'],DataSourceInfo.DisplayName,"Component")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App Fabric Mill - New Style'], DataSourceInfo.MaxLength, "Component")
+            Required: =true
+            Update: =DataCardValue73.Text
+            Width: =319
+            X: =0
+            Y: =1
+            ZIndex: =12
+
+            DataCardKey74 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue73 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey74.Y + DataCardKey74.Height + 5
+                ZIndex: =2
+
+            ErrorMessage74 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue73.Y + DataCardValue73.Height
+                ZIndex: =3
+
+        "'Current Speed_DataCard1' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Current_x0020_SMV"
+            Default: =ThisItem.'Current Speed'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - New Style'],DataSourceInfo.DisplayName,"Current_x0020_SMV")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =Value(DataCardValue77.Text)
+            Width: =319
+            X: =1
+            Y: =2
+            ZIndex: =12
+
+            DataCardKey78 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue77 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey78.Y + DataCardKey78.Height + 5
+                ZIndex: =2
+
+            ErrorMessage78 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue77.Y + DataCardValue77.Height
+                ZIndex: =3
+
+        Program_DataCard2 As typedDataCard.textualEditCard:
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Program"
+            Default: =ThisItem.Program
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - New Style'],DataSourceInfo.DisplayName,"Program")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App Fabric Mill - New Style'], DataSourceInfo.MaxLength, "Program")
+            Required: =false
+            Update: =DataCardValue74.Text
+            Width: =319
+            X: =0
+            Y: =3
+            ZIndex: =12
+
+            DataCardKey75 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue74 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey75.Y + DataCardKey75.Height + 5
+                ZIndex: =2
+
+            ErrorMessage75 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue74.Y + DataCardValue74.Height
+                ZIndex: =3
+
+            StarVisible68 As label:
+                Align: =Align.Center
+                Height: =DataCardKey75.Height
+                Size: =21
+                Text: ="*"
+                Visible: =And(Parent.Required, Parent.DisplayMode=DisplayMode.Edit)
+                Width: =30
+                Wrap: =false
+                Y: =DataCardKey75.Y
+                ZIndex: =4
+
+        "'Machine No_DataCard2' As typedDataCard.textualEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Machine_x0020_No"
+            Default: =ThisItem.'Machine No'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - New Style'],DataSourceInfo.DisplayName,"Machine_x0020_No")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            MaxLength: =DataSourceInfo([@'Audit App Fabric Mill - New Style'], DataSourceInfo.MaxLength, "Machine_x0020_No")
+            Required: =true
+            Update: =DataCardValue75.Text
+            Width: =319
+            X: =1
+            Y: =3
+            ZIndex: =12
+
+            DataCardKey76 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue75 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                MaxLength: =Parent.MaxLength
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey76.Y + DataCardKey76.Height + 5
+                ZIndex: =2
+
+            ErrorMessage76 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue75.Y + DataCardValue75.Height
+                ZIndex: =3
+
+        "'Machine Type_DataCard1' As typedDataCard.comboBoxEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="MachineType"
+            Default: =ThisItem.'Machine Type'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - New Style'],DataSourceInfo.DisplayName,"MachineType")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =DataCardValue79.Selected
+            Width: =319
+            X: =0
+            Y: =4
+            ZIndex: =12
+
+            DataCardKey80 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue79 As combobox:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                DefaultSelectedItems: =Parent.Default
+                DisplayFields: =["Value"]
+                DisplayMode: =Parent.DisplayMode
+                Height: =70
+                Items: =Choices([@'Audit App Fabric Mill - New Style'].'Machine Type')
+                PaddingLeft: =If(Self.DisplayMode = DisplayMode.Edit, 5, 0)
+                SearchFields: =["Value"]
+                SearchItems: =Choices('Audit App Fabric Mill - New Style'.'Machine Type',DataCardValue79.SearchText)
+                SelectMultiple: =false
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey80.Y + DataCardKey80.Height + 5
+                ZIndex: =2
+
+            ErrorMessage80 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue79.Y + DataCardValue79.Height
+                ZIndex: =3
+
+        "'Machine SMV_DataCard2' As typedDataCard.numberEditCard":
+            BorderStyle: =BorderStyle.Solid
+            DataField: ="Machine_x0020_SMV"
+            Default: =ThisItem.'Machine SMV'
+            DisplayMode: =Parent.DisplayMode
+            DisplayName: =DataSourceInfo([@'Audit App Fabric Mill - New Style'],DataSourceInfo.DisplayName,"Machine_x0020_SMV")
+            Fill: =RGBA(0, 0, 0, 0)
+            Height: =50
+            Required: =true
+            Update: =Value(DataCardValue76.Text)
+            Width: =319
+            X: =1
+            Y: =4
+            ZIndex: =12
+
+            DataCardKey77 As label:
+                Align: =Align.Center
+                AutoHeight: =true
+                Color: =RGBA(255, 255, 255, 1)
+                Fill: =RGBA(0, 134, 208, 1)
+                Height: =48
+                Size: =21
+                Text: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                Wrap: =false
+                X: =30
+                Y: =10
+                ZIndex: =1
+
+            DataCardValue76 As text:
+                BorderColor: =If(IsBlank(Parent.Error), Parent.BorderColor, Color.Red)
+                BorderThickness: =0
+                Default: =Parent.Default
+                DelayOutput: =true
+                DisplayMode: =Parent.DisplayMode
+                Format: =TextFormat.Number
+                Height: =70
+                PaddingLeft: =5
+                RadiusBottomLeft: =0
+                RadiusBottomRight: =0
+                RadiusTopLeft: =0
+                RadiusTopRight: =0
+                Size: =21
+                Tooltip: =Parent.DisplayName
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardKey77.Y + DataCardKey77.Height + 5
+                ZIndex: =2
+
+            ErrorMessage77 As label:
+                AutoHeight: =true
+                Height: =10
+                Live: =Live.Assertive
+                PaddingBottom: =0
+                PaddingLeft: =0
+                PaddingRight: =0
+                PaddingTop: =0
+                Size: =24
+                Text: =Parent.Error
+                Visible: =Parent.DisplayMode=DisplayMode.Edit
+                Width: =Parent.Width - 60
+                X: =30
+                Y: =DataCardValue76.Y + DataCardValue76.Height
+                ZIndex: =3
+
+    Icon1_10 As icon.BackArrow:
+        Color: =RGBA(0, 0, 0, 1)
+        Height: =40
+        Icon: =Icon.Home
+        OnSelect: =Navigate('AUDIT APPLICATION')
+        Width: =40
+        X: =26
+        Y: =1085
+        ZIndex: =12
+
+    Button6_2 As button:
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =45
+        OnSelect: |
+            =SubmitForm(FormFabricMillCarryOver);
+        Text: ="Submit"
+        Visible: =varCO
+        X: =445
+        Y: =970
+        ZIndex: =13
+
+    Button6_3 As button:
+        Fill: =RGBA(0, 134, 208, 1)
+        Height: =45
+        OnSelect: |
+            =SubmitForm(FormFabricMillNew);
+        Text: ="Submit"
+        Visible: =varN
+        X: =465
+        Y: =990
+        ZIndex: =14
+
